@@ -41,7 +41,7 @@
 
 .background-section {
   height: 750px;
-  background: url("../../img/bg1.png");
+  background: url("../img/bg1.png");
   background-size: cover; }
 
 .header-section {
@@ -192,7 +192,7 @@
   color: #29323c;
   font: 400 16px/26px 'Open Sans', sans-serif; }
   .bloquotes:after {
-    content: url("../../img/quo.png");
+    content: url("../img/quo.png");
     display: block;
     color: #29323c; }
 
@@ -202,7 +202,7 @@
   padding: 20px; }
 
 .professional-section {
-  background: url("../../img/bg2.png");
+  background: url("../img/bg2.png");
   background-size: cover;
   height: 100%; }
   .professional-section__h2 {
@@ -429,7 +429,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: url("../../img/bg3.png"); }
+  background: url("../img/bg3.png"); }
   @media screen and (max-width: 767px) {
     .form {
       width: 100%; } }
