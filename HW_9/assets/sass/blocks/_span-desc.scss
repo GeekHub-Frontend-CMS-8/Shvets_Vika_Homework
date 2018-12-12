@@ -1,0 +1,9 @@
+@import "../variables";
+
+.span_desc {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: $secondary;
+  font: 400 13px/20px 'Montserrat', sans-serif;
+}

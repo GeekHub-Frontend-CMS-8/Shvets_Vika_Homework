@@ -1,0 +1,29 @@
+.wrap {
+  width: 315px;
+  margin: 0 auto;
+  @media screen and (min-width: 375px) {
+    & {
+      width: 370px;
+    }
+  }
+  @media screen and (min-width: 425px) {
+    & {
+      width: 420px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & {
+      width: 750px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    & {
+      width: 1010px;
+    }
+  }
+  @media screen and (min-width: 1170px) {
+    & {
+      width: 1140px;
+    }
+  }
+}

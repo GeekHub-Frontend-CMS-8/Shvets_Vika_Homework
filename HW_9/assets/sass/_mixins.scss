@@ -1,0 +1,54 @@
+@import "variables";
+
+@mixin flex_center_position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hover_mixin {
+  color: $secondary;
+  transition: .3s;
+  background-color: $sections-bg;
+}
+
+@mixin hover_mixin-filter {
+  transition: .3s;
+  filter: invert(90%);
+}
+
+@mixin hover_mixin_input {
+  transition: .3s;
+  background-color: rgba(255, 255, 255, .1);
+}
+
+@mixin cmn_btn {
+  width: 126px;
+  height: 40px;
+  border: 1px solid $border;
+  border-radius: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: transparent;
+  outline: none;
+  color: $primary;
+  font: 700 13px/36px 'Montserrat', sans-serif;
+  &:hover {
+    outline: none;
+    @include hover_mixin;
+    background-color: rgba(255, 255, 255, .3);
+    color: $secondary;
+  }
+}
+
+@mixin cmn_input {
+  padding: 0;
+  width: 300px;
+  height: 45px;
+  border: 1px solid $primary;
+  background-color: transparent;
+  outline: none;
+  &:active, &:focus, &:hover {
+    @include hover_mixin_input;
+  }
+}

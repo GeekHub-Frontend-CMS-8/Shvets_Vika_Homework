@@ -1,0 +1,14 @@
+@import "../variables";
+@import "../mixins";
+
+.bloquotes {
+  text-align: center;
+  color: $secondary;
+  font: 400 16px/26px 'Open Sans', sans-serif;
+
+  &:after {
+    content: url("../../img/quo.png");
+    display: block;
+    color: $secondary;
+  }
+}

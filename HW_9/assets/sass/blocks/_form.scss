@@ -1,0 +1,67 @@
+@import "../mixins";
+
+.form {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: url("../../img/bg3.png");
+  @media screen and (max-width: 767px) {
+    & {
+      width: 100%;
+    }
+  }
+
+  &__ul {
+    display: inline-flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: space-around;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__li {
+    width: 380px;
+    display: inline-flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    @media screen and (max-width: 767px) {
+      & {
+        flex-flow: column;
+        width: 300px;
+      }
+    }
+  }
+
+  &__input {
+    @include cmn_input;
+  }
+
+  &__textarea {
+    @include cmn_input;
+    height: 145px;
+    resize: none;
+  }
+
+  &__label {
+    color: $accent;
+    font: 400 14px/36px 'Montserrat', sans-serif;
+  }
+
+  &__li-btn {
+    align-self: flex-end;
+  }
+
+  &__btn {
+    @include cmn_btn;
+    width: 120px;
+    height: 45px;
+    align-self: flex-end;
+    border: 1px solid $border;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
