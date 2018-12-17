@@ -1,0 +1,22 @@
+@import "../variables";
+@import "../mixins";
+
+.professional-section {
+  background: url("../img/bg2.png");
+  background-size: cover;
+  height: 100%;
+
+  &__h2 {
+    color: $primary;
+  }
+
+  &__btn {
+    @include cmn_btn;
+    width: 200px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    margin: 100px auto;
+
+  }
+}

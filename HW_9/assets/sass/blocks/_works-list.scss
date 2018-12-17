@@ -1,0 +1,80 @@
+@import "../variables";
+@import "../mixins";
+
+.works-list {
+  display: flex;
+  flex-flow: column wrap;
+  @media screen and (min-width: 767px) {
+    & {
+      flex-flow: row wrap;
+    }
+  }
+  @media screen and (min-width: 1023px) {
+    & {
+      flex-flow: row wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex-basis: 100%;
+    @media screen and (min-width: 768px) {
+      & {
+        flex-basis: 33.3333%;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      & {
+        flex-basis: 20%;
+      }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    &:hover .works-list__hover {
+      transition: .3s;
+      opacity: 1;
+    }
+  }
+
+  &__hover {
+    text-align: center;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: .3s;
+    background-color: rgba(77, 77, 77, .8);
+    @media screen and (min-width: 768px) {
+      & {
+        flex-basis: 33.3333%;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      & {
+        flex-basis: 20%;
+      }
+    }
+  }
+
+  h3 {
+    color: $primary;
+    font: 700 15px/20px 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $primary;
+    font: 400 13px/20px 'Montserrat', sans-serif;
+  }
+
+}

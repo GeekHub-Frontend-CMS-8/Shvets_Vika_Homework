@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+@import "blocks/navigation";
+@import "blocks/background-section";
+@import "blocks/header-section";
+@import "blocks/service-section";
+@import "blocks/h2-block";
+@import "blocks/services-list";
+@import "blocks/works-list";
+@import "blocks/bloquotes";
+@import "blocks/clients";
+@import "blocks/professional-section";
+@import "blocks/span-desc";
+@import "blocks/span-name";
+@import "blocks/professionals";
+@import "blocks/social-list";
+@import "blocks/person";
+@import "blocks/brands";
+@import "blocks/price-list";
+@import "blocks/map";
+@import "blocks/form";
+@import "blocks/copyright";
+@import "blocks/wrap";
+@import "blocks/map-form";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  margin-left: -40px;
+  list-style-type: none;
+}
+
+button {
+  text-decoration: none;
+
+  button:active, button:hover, button:focus {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  a:active, a:hover, a:focus {
+    text-decoration: none;
+  }
+}

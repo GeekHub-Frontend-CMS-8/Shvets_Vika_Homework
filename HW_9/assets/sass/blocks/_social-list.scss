@@ -1,0 +1,19 @@
+@import "../variables";
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+
+  &__li {
+    display: inline-flex;
+    margin: 3px;
+
+    &:hover {
+      transition: .3s;
+      filter: invert(40%);
+    }
+  }
+
+}

@@ -1,0 +1,10 @@
+@import "../variables";
+@import "../mixins";
+
+.carousel {
+  &__img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}

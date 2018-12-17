@@ -1,0 +1,68 @@
+@import "../variables";
+@import "../variables";
+@import "../mixins";
+
+.navigation {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: flex-end;
+  align-items: center;
+
+  &__span {
+    padding-left: 30px;
+    padding-right: 10px;
+    color: $primary;
+    text-transform: uppercase;
+  }
+
+  .tg {
+    display: inline-flex;
+    align-items: center;
+    outline: none;
+  }
+
+
+  ul {
+    flex-flow: row;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 767px) {
+      & {
+        flex-flow: column;
+
+      }
+    }
+  }
+
+  &__li {
+    padding: 30px;
+    color: $primary;
+    text-transform: uppercase;
+    display: inline-flex;
+    @media screen and (max-width: 767px) {
+      & {
+        padding: 5px;
+
+      }
+    }
+
+    &:hover {
+      @include hover_mixin;
+    }
+
+    &:hover a {
+      text-decoration: none;
+      color: $secondary;
+    }
+
+    a {
+      color: $primary;
+
+    }
+  }
+}
+
+
+

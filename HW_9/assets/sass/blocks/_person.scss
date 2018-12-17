@@ -1,0 +1,68 @@
+@import "../variables";
+@import "../mixins";
+
+.person {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column;
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  background-color: rgba(242, 242, 242, .7);
+
+  &:hover .person__h2-block {
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 767px) {
+    & {
+      width: 47%;
+    }
+  }
+  @media screen and (min-width: 1023px) {
+    & {
+      width: 24%;
+    }
+  }
+
+  &__avatar {
+    height: 270px;
+  }
+
+  &__avatar img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__h2 {
+    padding-top: 0px;
+    color: $primary;
+    font-size: 13px;
+  }
+
+  &__h2-block {
+    text-align: center;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 270px;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: .3s;
+    background-color: rgba(77, 77, 77, .5);
+    @media screen and (min-width: 768px) {
+      & {
+        width: 100%;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+}
