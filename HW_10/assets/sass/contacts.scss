@@ -1,0 +1,105 @@
+@import "variables";
+@import "mixins";
+
+.contacts {
+  background: $backgroung-contacts url("../img/contacts-bg.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+
+  h3 {
+    padding: 10px 0;
+    color: $primary;
+    font: 700 30px 'Lato', sans-serif;
+    @media (max-width: 992px) {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+  }
+
+  &-section {
+    padding-top: 120px;
+  }
+
+  &-form {
+    .form-btn {
+      width: 260px;
+      height: 50px;
+      display: block;
+      margin: 10px auto;
+      margin-bottom: 120px;
+      box-shadow: inset 0 -4px 0 rgba(178, 74, 80, 0.5);
+      background-color: #df5c64;
+      color: $primary;
+      font: 400 26px/21px 'Lato - Black', sans-serif;
+      text-transform: uppercase;
+      border: none;
+
+      &:hover {
+        transition: .3s;
+        filter: grayscale(60%);
+        cursor: pointer;
+      }
+    }
+
+    input {
+      @include input-style;
+      @media (max-width: 992px) {
+        margin-top: 20px;
+      }
+    }
+
+    textarea {
+      @include input-style;
+      resize: none;
+      height: 100%;
+      min-height: 165px;
+      margin-top: 30px;
+    }
+  }
+
+}
+
+.place {
+  display: block;
+  color: $primary;
+  font: $input-font;
+
+  &-spec {
+    display: block;
+    color: rgba(255, 255, 255, .7);
+    font: $cmn-font2;
+    font-weight: 700;
+    padding-bottom: 5px;
+  }
+}
+
+.contact {
+  padding-top: 70px;
+
+  &-name {
+    font: $input-font;
+    color: rgba(255, 255, 255, .7);
+  }
+
+  &-connect {
+    font: $input-font;
+    color: $primary;
+  }
+
+  a {
+    color: $primary;
+    text-decoration: underline solid $primary;
+
+    &:hover {
+      transition: .3s;
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}

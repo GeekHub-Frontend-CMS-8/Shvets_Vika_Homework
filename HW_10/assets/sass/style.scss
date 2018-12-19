@@ -1,0 +1,121 @@
+@import "variables";
+@import "mixins";
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:active, &:hover, &:focus {
+    text-decoration: none;
+    color: $primary;
+  }
+}
+
+h2 {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: $primary;
+  text-transform: uppercase;
+  font: 300 60px/58px 'Lato', sans-serif;
+}
+
+.headline-p {
+  text-align: center;
+  color: $primary;
+  font: $cmn-font;
+}
+
+.desc {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: $primary;
+  font: $cmn-font;
+
+  &-name {
+    color: $name;
+  }
+}
+
+.special {
+  text-align: center;
+  color: $primary;
+  text-transform: uppercase;
+  font: $cmn-font2;
+
+  &-span {
+    color: $headline-p;
+  }
+
+}
+
+.social {
+  @include inline-flex-around-center;
+
+  li {
+    display: inline-flex;
+  }
+
+  a {
+    @include inline-flex-around-center;
+    width: 31px;
+    height: 31px;
+    background-color: $socials;
+    border-radius: 50px;
+  }
+
+  i {
+    display: inline-flex;
+    color: $primary;
+  }
+
+  &-footer {
+    @include flex-center-center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: $inputs;
+
+    a {
+      width: 60px;
+      height: 60px;
+      background-color: $backgroung-contacts;
+      margin: 15px;
+      @media (max-width: 767px) {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+      }
+
+      i {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.fb:hover {
+  transition: .3s;
+  background-color: $facebook;
+}
+
+.tw:hover {
+  transition: .3s;
+  background-color: $twitter;
+}
+
+.in:hover {
+  transition: .3s;
+  background-color: $linkedin;
+}
+
+.gl:hover {
+  transition: .3s;
+  background-color: $google;
+}
