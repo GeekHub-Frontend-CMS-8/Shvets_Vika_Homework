@@ -1,0 +1,60 @@
+@import "variables";
+@import "mixins";
+
+.services {
+  background: $backgroung-services url("../img/bg-services.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+
+  &-item {
+    @include inline-flex-around-center;
+    min-height: 400px;
+    flex-flow: column;
+    margin-top: 15px;
+    background-color: rgba(200, 83, 90, .8);
+
+    &:hover img {
+      @include hover-filter;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto 0 auto;
+    }
+  }
+
+  &-list {
+    padding: 90px 0;
+  }
+}
+
+h3 {
+  text-align: center;
+  color: $primary;
+  text-transform: uppercase;
+  font: 300 30px/58px 'Lato', sans-serif;
+}
+
+.desc {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: $primary;
+  font: $cmn-font;
+}
+
+.special {
+  text-align: center;
+  color: $primary;
+  text-transform: uppercase;
+  font: 400 20px 'Lato', sans-serif;
+
+  &-span {
+    color: $headline-p;
+  }
+
+}
+
+.nav-a:hover, .links a:hover {
+  background-color: rgba(200, 83, 90, .8);
+}

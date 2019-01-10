@@ -1,0 +1,52 @@
+@import "variables";
+@import "mixins";
+
+.person {
+  background: $backgroung-about url("../img/bg-about.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+
+  .meet {
+    height: 65px;
+    display: block;
+    margin-top: 50px;
+    line-height: 50px;
+    background: url("../img/msg.png") center no-repeat;
+  }
+
+  &-photo {
+    width: 155px;
+    height: 155px;
+    display: block;
+    margin: 0 auto;
+    background-image: url("../img/person.png");
+    background-size: 100%;
+  }
+
+  &-item {
+    @include inline-flex-around-center;
+    width: 100%;
+    min-height: 400px;
+    flex-flow: column;
+    margin-top: 15px;
+    background-color: rgba(77, 63, 75, .8);
+
+    &:hover .person-photo {
+      transition: .3s;
+      background-image: url("../img/person-hover.png");
+    }
+
+    &:hover .desc-name {
+      color: $backgroung-services;
+      transition: .3s;
+    }
+  }
+
+  &-list {
+    padding: 50px 0;
+  }
+}
+
+.nav-a:hover {
+  background-color: rgba(77, 63, 75, .8);
+}
