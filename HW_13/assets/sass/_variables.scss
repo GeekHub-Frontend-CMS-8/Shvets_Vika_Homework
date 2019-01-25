@@ -1,0 +1,97 @@
+@mixin flex_center_position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin common_btn {
+  width: 145px;
+  height: 38px;
+  background-color: $accent;
+  color: $primary;
+  font: $button-font;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  &:hover {
+    transition: 0.2s;
+    background-color: $secondary;
+    cursor: pointer;
+  }
+}
+
+@mixin news_h4_header($color) {
+  color: $color;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+@mixin news_content {
+  color: #848e97;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+@mixin news_button {
+  border: none;
+  background-color: #f4f4f4;
+  color: #8d81ac;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  &:hover {
+    transition: 0.2s;
+    background-color: $secondary;
+    cursor: pointer;
+  }
+}
+
+@mixin news_h3_header {
+  color: #d3d1da;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 35px 0;
+
+}
+
+@mixin line($color) {
+  opacity: 0.8;
+  margin-bottom: 10px;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid $color;
+}
+
+@mixin h2_style($color) {
+  text-align: center;
+  opacity: 0.8;
+  color: $color;
+  font: 700 46px/49px 'Asap', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5.52px;
+}
+
+$nav-font: 400 18px 'Lato', sans-serif;
+$cmn-font: 400 13px/18px 'Montserrat', sans-serif;
+$cmn-font2: 400 14px/25px "Crimson Text", sans-serif;
+$primary: #3e3d3d;
+$accent: #74c7d5;
+$secondary: #ffffff;
+$status: #818181;
+$socials: #a1859e;
+$facebook: #4f689e;
+$google: #df5c64;
+$twitter: #74c7d5;
+$behance: #0057ff;
+$linkedin: #3e61af;
+$youtube: #ff0000;
+$inputs: #68a097;
+$input-text: #949494;
