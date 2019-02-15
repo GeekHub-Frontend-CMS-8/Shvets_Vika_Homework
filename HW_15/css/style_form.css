@@ -1,0 +1,27 @@
+li {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+fieldset {
+    margin: 5px;
+}
+
+p {
+    font-weight: bold;
+}
+
+legend {
+    font-weight: bold;
+
+}
+
+.entered, .email {
+    width: 250px;
+}
+
+.age {
+    width: 50px;
+}
