@@ -1,0 +1,22 @@
+main {
+  background: url("../img/cat-bg.jpg") center;
+  background-size: cover;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.draggable {
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  height: 75px;
+  border: black solid 2px;
+  border-radius: 10px;
+}
+
+.tower {
+  position: absolute;
+  background-color: #222222;
+}
