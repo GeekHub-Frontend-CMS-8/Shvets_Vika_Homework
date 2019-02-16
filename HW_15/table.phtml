@@ -1,0 +1,116 @@
+<?php
+$dbh = new PDO('mysql:host=localhost;port=3306;dbname=geekhub', '', '');
+if (isset($_POST['email'])) {
+    $dbh->prepare('INSERT INTO save_hw3_form (`id`, `name`, `surname`, `html_book`, `gender`, `age`, `sex`, `date`,
+                        `marital`, `social`, `home`, `weekend`, `books`, `comments`, `position`, `entered`,
+                        `email`, `spam`, `task`)
+                        VALUES (NULL, :name, :surname, :html_book, :gender, :age, :sex, :date, :marital,
+                        :social, :home, :weekend, :books, :comments, :position, :entered, :email, :spam, :task)')
+        ->execute([
+            ':name' => $_POST['name'],
+            ':surname' => $_POST['surname'],
+            ':html_book' => $_POST['html_books'],
+            ':gender' => $_POST['gender'],
+            ':age' => $_POST['age'],
+            ':sex' => $_POST['sex'],
+            ':date' => date('Y-m-d H:i:s', strtotime($_POST['date'])),
+            ':marital' => $_POST['marital'],
+            ':social' => $_POST['social'],
+            ':home' => $_POST['home'],
+            ':weekend' => json_encode($_POST['weekend']),
+            ':books' => $_POST['books'],
+            ':comments' => $_POST['comments'],
+            ':position' => $_POST['position'],
+            ':entered' => $_POST['entered'],
+            ':email' => $_POST['email'],
+            ':spam' => json_encode($_POST['spam']),
+            ':task' => json_encode($_POST['task']),
+        ]);
+}
+$page = 1;
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+}
+
+$users = $dbh->query('SELECT * FROM save_hw3_form');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info Table</title>
+    <link href="css/style_table.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>surname</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>email</th>
+        <th>date of birth</th>
+        <th>home</th>
+        <th>social</th>
+        <th>weekend</th>
+        <th>comments</th>
+        <th>html books</th>
+        <th>sex</th>
+        <th>position</th>
+        <th>marital</th>
+        <th>books</th>
+        <th>task</th>
+        <th>spam</th>
+        <th>entered</th>
+    </tr>
+    <?php foreach ($users as $user) : ?>
+        <tr>
+            <td><?php echo $user['id'] ?></td>
+            <td><?php echo $user['name'] ?></td>
+            <td><?php echo $user['surname'] ?></td>
+            <td><?php echo $user['age'] ?></td>
+            <td><?php echo $user['gender'] ?></td>
+            <td><?php echo $user['email'] ?></td>
+            <td><?php echo date('Y.m.d', strtotime($user['date'])) ?></td>
+            <td><?php echo $user['home'] ?></td>
+            <td><?php echo $user['social'] ?></td>
+
+            <td>
+                <?php
+                $weekends = json_decode($user['weekend']);
+                if (is_array($weekends)) {
+                    foreach ($weekends as $weekend) {
+                        echo $weekend . '<br/>';
+                    }
+                } else {
+                    echo $weekends;
+                }
+                ?>
+            </td>
+            <td><?php echo $user['comments'] ?></td>
+            <td><?php echo $user['html_book'] ?></td>
+            <td><?php echo $user['sex'] ?></td>
+            <td><?php echo $user['position'] ?></td>
+            <td><?php echo $user['marital'] ?></td>
+            <td><?php echo $user['books'] ?></td>
+            <td><?php echo $user['task'] ?></td>
+            <td>
+                <?php
+                $spam = json_decode($user['spam']);
+                if (is_array($spam)) {
+                    foreach ($spam as $spam) {
+                        echo $spam . '<br/>';
+                    }
+                } else {
+                    echo $spam;
+                }
+                ?>
+            </td>
+            <td><?php echo $user['entered'] ?></td>
+
+        </tr>
+    <?php endforeach; ?>
+</table>
+</body>
+</html>
