@@ -1,0 +1,92 @@
+.post {
+    background-color: #362f2f;
+    margin: 20px 0;
+    height: 100%;
+}
+
+.post-content {
+    padding: 15px;
+    color: #ffffff;
+}
+
+.post-content h2 {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.post-content P {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.post-content button {
+    background-color: #362f2f;
+    width: 80px;
+    height: 40px;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 180px;
+    height: 30px;
+    background-color: #c3a000;
+    color: #ffffff;
+    font-family: "Roboto Condensed";
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    display: block;
+    margin: 40px auto;
+}
+
+.post-content button:hover, .post-content button:active, .post-content button:focus {
+    transition: .3s;
+    color: #ffffff;
+    background-color: #c3a000;
+    cursor: pointer;
+    outline: none;
+}
+
+.post img {
+    width: 100%;
+}
+
+.pagination {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    background-color: #362f2f;
+    width: 80px;
+    height: 40px;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.pagination button:hover, .pagination button:active, .pagination button:focus {
+    transition: .3s;
+    color: #ffffff;
+    background-color: #c3a000;
+    cursor: pointer;
+    outline: none;
+}
+
+.mar {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
