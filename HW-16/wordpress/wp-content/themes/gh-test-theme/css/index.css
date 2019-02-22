@@ -1,0 +1,17 @@
+.button-description {
+  padding: 10px 0 40px 0;
+  align-items: center; }
+
+.about {
+  padding-left: 20px; }
+
+.main-photo {
+  height: calc(100% - 263px); }
+  .main-photo img {
+    width: 100%;
+    height: 100%; }
+
+.whois {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic; }

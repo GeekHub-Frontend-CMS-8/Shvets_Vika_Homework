@@ -1,0 +1,1 @@
+View for singular post and page
